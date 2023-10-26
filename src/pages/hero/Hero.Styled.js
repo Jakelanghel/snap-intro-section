@@ -10,9 +10,11 @@ export const StyledHero = styled.main`
   .container-hero-img {
     order: 1;
     min-height: 300px;
+    max-height: none;
     width: 100%;
     background-image: url(${images.imageHeroMobile});
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
     margin-bottom: 3rem;
   }
 
@@ -44,5 +46,11 @@ export const StyledHero = styled.main`
 
   .audiophile {
     width: 55px;
+  }
+
+  @media (min-width: 400px) {
+    .container-hero-img {
+      min-height: 350px;
+    }
   }
 `;
