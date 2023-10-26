@@ -8,6 +8,15 @@ const Nav = () => {
   const toggleMenu = () => {
     setMenuIsOpen(!menuIsOpen);
   };
+
+  const dropdown_1 = [
+    { img: images.iconTodo, txt: "Todo List" },
+    { img: images.iconCalendar, txt: "Calendar" },
+    { img: images.iconReminders, txt: "Reminders" },
+    { img: images.iconPlanning, txt: "Planning" },
+  ];
+  const dropdown_2 = [{ txt: "History" }, { txt: "Our Team" }, { txt: "Blog" }];
+
   return (
     <StyledNav>
       <div className="container-img">

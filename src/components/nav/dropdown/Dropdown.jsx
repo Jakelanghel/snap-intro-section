@@ -1,23 +1,28 @@
-import { images } from "../../../constants/images";
+import PropTypes from "prop-types";
 
-const Dropdown = () => {
+const Dropdown = (props) => {
   // {img: "/img/", copy: "aldsjf"}
 
-  const dropdown_1 = [
-    { img: images.iconTodo, txt: "Todo List" },
-    { img: images.iconCalendar, txt: "Calendar" },
-    { img: images.iconReminders, txt: "Reminders" },
-    { img: images.iconPlanning, txt: "Planning" },
-  ];
-
-  const dropdownItems = dropdown_1.map((item) => {
-    <a href="#">
-      <img src={item.img} alt={item.txt} />
-      {item.txt}
-    </a>;
+  const dropdownItems = props.map((item) => {
+    item.img ? (
+      <a href="#">
+        <img src={item.img} alt={item.txt} />
+        {item.txt}
+      </a>
+    ) : (
+      <a href="#">{item.txt}</a>
+    );
   });
 
-  return <div></div>;
+  return (
+    <div>
+      <dropdownItems />
+    </div>
+  );
+};
+
+Dropdown.propTypes = {
+  map: PropTypes.array.isRequired, // Example prop validation for 'map'
 };
 
 export default Dropdown;
