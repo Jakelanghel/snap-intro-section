@@ -9,6 +9,14 @@ const GlobalStyles = createGlobalStyle`
     --gray: hsl(0, 0%, 41%);
 }
 
+
+#root,
+html,
+body, 
+.container-app {
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

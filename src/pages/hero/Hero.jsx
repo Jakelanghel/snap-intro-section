@@ -12,7 +12,9 @@ const Hero = () => {
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
         </p>
+
         <StyledButton>Learn More</StyledButton>
+
         <div className="container-clients">
           <img
             src={images.clientDatabiz}

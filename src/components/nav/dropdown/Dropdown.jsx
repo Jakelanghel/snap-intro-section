@@ -1,28 +1,30 @@
 import PropTypes from "prop-types";
+import { StyledDropdown } from "./Dropdown.Styled";
 
 const Dropdown = (props) => {
-  // {img: "/img/", copy: "aldsjf"}
-
-  const dropdownItems = props.map((item) => {
-    item.img ? (
-      <a href="#">
-        <img src={item.img} alt={item.txt} />
-        {item.txt}
-      </a>
-    ) : (
-      <a href="#">{item.txt}</a>
-    );
+  const { arr } = props;
+  const dropDown = arr.map((item) => {
+    if (item.img) {
+      return (
+        <a href="#" key={item.txt}>
+          <img src={item.img} alt={item.txt} />
+          {item.txt}
+        </a>
+      );
+    } else {
+      return (
+        <a href="#" key={item.txt}>
+          {item.txt}
+        </a>
+      );
+    }
   });
 
-  return (
-    <div>
-      <dropdownItems />
-    </div>
-  );
+  return <StyledDropdown>{dropDown}</StyledDropdown>;
 };
 
 Dropdown.propTypes = {
-  map: PropTypes.array.isRequired, // Example prop validation for 'map'
+  arr: PropTypes.array.isRequired,
 };
 
 export default Dropdown;

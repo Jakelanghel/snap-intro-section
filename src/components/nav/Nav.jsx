@@ -1,6 +1,7 @@
 import { StyledNav } from "./Nav.Styled";
 import { images } from "../../constants/images";
 import { useState } from "react";
+import Dropdown from "./dropdown/Dropdown";
 
 const Nav = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -35,9 +36,15 @@ const Nav = () => {
             <li className="toggle-dropdown">
               features <img src={images.iconArrowDown} alt="toggle-drop-down" />
             </li>
+
+            <Dropdown arr={dropdown_1} />
+
             <li className="toggle-dropdown">
               company <img src={images.iconArrowDown} alt="toggle-drop-down" />
             </li>
+
+            <Dropdown arr={dropdown_2} />
+
             <li>
               <a href="#">careers</a>
             </li>
