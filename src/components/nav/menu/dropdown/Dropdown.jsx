@@ -26,12 +26,10 @@ const Dropdown = (props) => {
   );
 
   return (
-    <>
-      <li className="toggle-dropdown" onClick={toggleDropdown}>
-        {label} <img src={arrowImg} alt="toggle-drop-down" />
-      </li>
+    <li className="toggle-dropdown menu-btn" onClick={toggleDropdown}>
+      {label} <img src={arrowImg} alt="toggle-drop-down" />
       {isOpen && dropDownItems}
-    </>
+    </li>
   );
 };
 

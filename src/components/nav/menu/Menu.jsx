@@ -14,34 +14,40 @@ const Menu = (props) => {
 
   const dropdown_2 = [{ txt: "History" }, { txt: "Our Team" }, { txt: "Blog" }];
   return (
-    <div className={"container-menu"}>
-      <div className="container-sidebar">
-        <img
-          src={images.iconCloseMenu}
-          alt="close menu"
-          className="close-menu"
-          onClick={toggleMenu}
-        />
-        <ul className="container-links">
-          <Dropdown label="Features" arr={dropdown_1} />
+    <div className="backdrop">
+      <div className={"container-menu"}>
+        <div className="container-sidebar">
+          <img
+            src={images.iconCloseMenu}
+            alt="close menu"
+            className="close-menu"
+            onClick={toggleMenu}
+          />
+          <ul className="container-links">
+            <Dropdown label="Features" arr={dropdown_1} />
 
-          <Dropdown label="Company" arr={dropdown_2} />
+            <Dropdown label="Company" arr={dropdown_2} />
 
-          <li>
-            <a href="#">careers</a>
-          </li>
-          <li>
-            <a href="#">about</a>
-          </li>
-        </ul>
+            <li>
+              <a href="#" className="toggle-dropdown menu-btn">
+                careers
+              </a>
+            </li>
+            <li>
+              <a href="#" className="toggle-dropdown menu-btn">
+                about
+              </a>
+            </li>
+          </ul>
 
-        <div className="container-account-actions">
-          <a href="#" className="action login">
-            login
-          </a>
-          <a href="#" className="action register">
-            register
-          </a>
+          <div className="container-account-actions">
+            <a href="#" className="action login">
+              login
+            </a>
+            <a href="#" className="action register">
+              register
+            </a>
+          </div>
         </div>
       </div>
     </div>
