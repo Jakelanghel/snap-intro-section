@@ -52,6 +52,10 @@ export const StyledMenu = styled.div`
     align-items: center;
   }
 
+  .toggle-dropdown:hover {
+    cursor: pointer;
+  }
+
   .container-account-actions {
     display: flex;
     flex-direction: column;
@@ -107,6 +111,9 @@ export const StyledMenu = styled.div`
       display: flex;
       gap: 1rem;
       align-items: center;
+    }
+
+    .container-dropdown {
       position: relative;
     }
 

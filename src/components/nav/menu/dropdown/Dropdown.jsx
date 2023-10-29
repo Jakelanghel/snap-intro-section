@@ -14,8 +14,11 @@ const Dropdown = (props) => {
 
   const arrowImg = isOpen ? images.iconArrowUp : images.iconArrowDown;
 
+  const posClass =
+    label === "Features" ? "features-dropdown" : "company-dropdown";
+
   const dropDownItems = (
-    <StyledDropdown>
+    <StyledDropdown className={posClass}>
       {arr.map((item) => (
         <a href="#" key={item.txt}>
           {item.img && <img src={item.img} alt={item.txt} />}
@@ -26,10 +29,12 @@ const Dropdown = (props) => {
   );
 
   return (
-    <li className="toggle-dropdown menu-btn" onClick={toggleDropdown}>
-      {label} <img src={arrowImg} alt="toggle-drop-down" />
+    <div className="container-dropdown">
+      <li className="toggle-dropdown menu-btn" onClick={toggleDropdown}>
+        {label} <img src={arrowImg} alt="toggle-drop-down" />
+      </li>
       {isOpen && dropDownItems}
-    </li>
+    </div>
   );
 };
 
