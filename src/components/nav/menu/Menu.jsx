@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Dropdown from "./dropdown/Dropdown";
+import { StyledMenu } from "./Menu.Styled";
 import { images } from "../../../constants/images";
 
 const Menu = (props) => {
@@ -14,8 +15,8 @@ const Menu = (props) => {
 
   const dropdown_2 = [{ txt: "History" }, { txt: "Our Team" }, { txt: "Blog" }];
   return (
-    <div className="backdrop">
-      <div className={"container-menu"}>
+    <StyledMenu>
+      <div className="container-menu">
         <div className="container-sidebar">
           <img
             src={images.iconCloseMenu}
@@ -50,7 +51,7 @@ const Menu = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </StyledMenu>
   );
 };
 
