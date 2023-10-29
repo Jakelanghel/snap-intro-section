@@ -1,22 +1,23 @@
 import { StyledNav } from "./Nav.Styled";
 import { images } from "../../constants/images";
 import { useState } from "react";
-import Dropdown from "./dropdown/Dropdown";
+
+import Menu from "./menu/Menu";
 
 const Nav = () => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const initial = window.innerWidth >= 1280;
+  const [menuIsOpen, setMenuIsOpen] = useState(initial);
 
   const toggleMenu = () => {
     setMenuIsOpen(!menuIsOpen);
   };
 
-  const dropdown_1 = [
-    { img: images.iconTodo, txt: "Todo List" },
-    { img: images.iconCalendar, txt: "Calendar" },
-    { img: images.iconReminders, txt: "Reminders" },
-    { img: images.iconPlanning, txt: "Planning" },
-  ];
-  const dropdown_2 = [{ txt: "History" }, { txt: "Our Team" }, { txt: "Blog" }];
+  const handleResize = () => {
+    const isOpen = window.innerWidth >= 1280;
+    setMenuIsOpen(isOpen);
+  };
+
+  window.addEventListener("resize", handleResize);
 
   return (
     <StyledNav>
@@ -24,37 +25,7 @@ const Nav = () => {
         <img src={images.logo} alt="snap logo" className="logo" />
       </div>
 
-      <div className={menuIsOpen ? `container-menu open` : "container-menu"}>
-        <div className="container-sidebar">
-          <img
-            src={images.iconCloseMenu}
-            alt="close menu"
-            className="close-menu"
-            onClick={toggleMenu}
-          />
-          <ul className="container-links">
-            <Dropdown label="Features" arr={dropdown_1} />
-
-            <Dropdown label="Company" arr={dropdown_2} />
-
-            <li>
-              <a href="#">careers</a>
-            </li>
-            <li>
-              <a href="#">about</a>
-            </li>
-          </ul>
-
-          <div className="container-account-actions">
-            <a href="#" className="action login">
-              login
-            </a>
-            <a href="#" className="action register">
-              register
-            </a>
-          </div>
-        </div>
-      </div>
+      {menuIsOpen ? <Menu toggleMenu={toggleMenu} /> : null}
 
       <button className="open-menu" onClick={toggleMenu}>
         <img src={images.iconMenu} alt="open menu" />

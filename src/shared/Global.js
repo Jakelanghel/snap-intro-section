@@ -24,6 +24,11 @@ body,
     font-family: 'Epilogue', sans-serif;
 }
 
+body {
+    background-color: var(--white);
+
+}
+
 
 
 

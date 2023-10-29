@@ -25,10 +25,6 @@ export const StyledNav = styled.nav`
   }
 
   .container-menu {
-    display: none;
-  }
-
-  .open {
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -39,7 +35,6 @@ export const StyledNav = styled.nav`
   .container-sidebar {
     width: 62%;
     max-width: 400px;
-    background-color: var(--white);
     margin-left: auto;
     display: flex;
     flex-direction: column;
@@ -94,6 +89,45 @@ export const StyledNav = styled.nav`
     padding: 0.75rem 0;
     border: solid 2px var(--gray);
     border-radius: 15px;
+  }
+
+  @media (min-width: 1280px) {
+    .close-menu,
+    .open-menu {
+      display: none;
+    }
+
+    .container-menu {
+      position: static;
+      height: auto;
+      width: 100%;
+      background: transparent;
+      border: solid 2px red;
+    }
+
+    .container-sidebar {
+      width: 100%;
+      max-width: none;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 0;
+    }
+
+    .container-links {
+      list-style: none;
+      display: flex;
+      align-self: center;
+      padding-top: 2rem;
+      padding-left: 2rem;
+      margin-bottom: 0;
+    }
+
+    li,
+    a {
+      margin-right: 1rem;
+    }
   }
 
   /* width: 100%;

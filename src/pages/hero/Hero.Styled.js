@@ -40,19 +40,6 @@ export const StyledHero = styled.main`
     color: var(--gray);
   }
 
-  @media (min-width: 400px) {
-    .title {
-      font-size: 2.5rem;
-      margin-bottom: 1%.5;
-    }
-
-    .copy {
-      max-width: 400px;
-      font-size: 1.15rem;
-      line-height: 2rem;
-    }
-  }
-
   .container-clients {
     width: 100%;
     display: flex;
@@ -71,6 +58,17 @@ export const StyledHero = styled.main`
   }
 
   @media (min-width: 400px) {
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 1%.5;
+    }
+
+    .copy {
+      max-width: 400px;
+      font-size: 1.15rem;
+      line-height: 2rem;
+    }
+
     .container-hero-img {
       min-height: 350px;
     }
@@ -81,6 +79,8 @@ export const StyledHero = styled.main`
 
     .container-hero-img {
       min-height: 700px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .title {

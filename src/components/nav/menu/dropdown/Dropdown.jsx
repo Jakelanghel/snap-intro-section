@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { images } from "../../../constants/images";
+import { images } from "../../../../constants/images";
 import { StyledDropdown } from "./Dropdown.Styled";
 
 const Dropdown = (props) => {
@@ -37,7 +37,6 @@ const Dropdown = (props) => {
 
 Dropdown.propTypes = {
   arr: PropTypes.array.isRequired,
-  dropDownOpen: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
 };
 
