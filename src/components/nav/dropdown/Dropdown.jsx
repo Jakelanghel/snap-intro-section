@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import { StyledDropdown } from "./Dropdown.Styled";
-import { images } from "../../../constants/images";
 import { useState } from "react";
+import { images } from "../../../constants/images";
+import { StyledDropdown } from "./Dropdown.Styled";
 
 const Dropdown = (props) => {
   const { label, arr } = props;
@@ -14,21 +14,23 @@ const Dropdown = (props) => {
 
   const arrowImg = isOpen ? images.iconArrowUp : images.iconArrowDown;
 
+  const dropDownItems = (
+    <StyledDropdown>
+      {arr.map((item) => (
+        <a href="#" key={item.txt}>
+          {item.img && <img src={item.img} alt={item.txt} />}
+          {item.txt}
+        </a>
+      ))}
+    </StyledDropdown>
+  );
+
   return (
     <>
       <li className="toggle-dropdown" onClick={toggleDropdown}>
         {label} <img src={arrowImg} alt="toggle-drop-down" />
       </li>
-      {isOpen && (
-        <StyledDropdown>
-          {arr.map((item) => (
-            <a href="#" key={item.txt}>
-              {item.img && <img src={item.img} alt={item.txt} />}
-              {item.txt}
-            </a>
-          ))}
-        </StyledDropdown>
-      )}
+      {isOpen && dropDownItems}
     </>
   );
 };

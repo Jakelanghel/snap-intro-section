@@ -38,6 +38,7 @@ export const StyledNav = styled.nav`
 
   .container-sidebar {
     width: 62%;
+    max-width: 400px;
     background-color: var(--white);
     margin-left: auto;
     display: flex;

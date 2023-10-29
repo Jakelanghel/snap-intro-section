@@ -33,9 +33,6 @@ const Nav = () => {
             onClick={toggleMenu}
           />
           <ul className="container-links">
-            {/* <li className="toggle-dropdown">
-              features <img src={images.iconArrowDown} alt="toggle-drop-down" />
-            </li> */}
             <Dropdown label="Features" arr={dropdown_1} />
 
             <Dropdown label="Company" arr={dropdown_2} />

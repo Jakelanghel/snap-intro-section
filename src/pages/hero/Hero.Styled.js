@@ -75,4 +75,29 @@ export const StyledHero = styled.main`
       min-height: 350px;
     }
   }
+
+  @media (min-width: 800px) {
+    height: none;
+
+    .container-hero-img {
+      min-height: 700px;
+    }
+
+    .title {
+      font-size: 3.5rem;
+      margin-bottom: 1%.5;
+    }
+
+    .copy {
+      max-width: 575px;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      padding: 2rem 0;
+    }
+
+    .container-clients {
+      margin-bottom: 4rem;
+      margin-top: 6rem;
+    }
+  }
 `;
