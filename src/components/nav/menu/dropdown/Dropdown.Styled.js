@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const StyledDropdown = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
 
@@ -16,8 +15,8 @@ export const StyledDropdown = styled.div`
 
   @media (min-width: 1280px) {
     position: absolute;
-    top: 65px;
-    padding: 1.5rem;
+    top: 50px;
+    padding: 1.5rem 1rem;
     background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
       rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -28,7 +27,6 @@ export const StyledDropdown = styled.div`
       width: 100%;
       display: flex;
       align-items: center;
-      gap: 1rem;
       padding: 0.5rem 1rem;
     }
   }

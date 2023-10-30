@@ -112,7 +112,6 @@ export const StyledMenu = styled.div`
 
     .toggle-dropdown {
       display: flex;
-      gap: 1rem;
       align-items: center;
     }
 
