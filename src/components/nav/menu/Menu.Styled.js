@@ -44,6 +44,7 @@ export const StyledMenu = styled.div`
 
   .menu-btn {
     padding: 1.25rem 2rem;
+    padding-right: 0;
   }
 
   .toggle-dropdown {
@@ -105,6 +106,8 @@ export const StyledMenu = styled.div`
       flex-direction: row;
       margin-bottom: 0;
       padding: 0;
+      gap: 1rem;
+      margin-left: 3rem;
     }
 
     .toggle-dropdown {
@@ -134,6 +137,15 @@ export const StyledMenu = styled.div`
     .register {
       border: solid 2px var(--gray);
       border-radius: 15px;
+    }
+
+    .features-dropdown {
+      right: 0;
+    }
+
+    .company-dropdown {
+      width: 165px;
+      left: 20px;
     }
   }
 `;
