@@ -9,5 +9,11 @@ export const StyledButton = styled.button`
   background-color: var(--black);
   padding: 1rem 1.5rem;
   border-radius: 15px;
-  border: none;
+  border: solid 2px black;
+
+  &:hover {
+    cursor: pointer;
+    background: white;
+    color: var(--black);
+  }
 `;

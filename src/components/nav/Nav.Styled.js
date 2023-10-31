@@ -27,6 +27,9 @@ export const StyledNav = styled.nav`
   @media (min-width: 1280px) {
     padding: 2rem;
 
+    .logo {
+      width: 100px;
+    }
     .close-menu,
     .open-menu {
       display: none;
