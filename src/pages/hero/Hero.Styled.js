@@ -106,11 +106,13 @@ export const StyledHero = styled.main`
     text-align: left;
     justify-content: center;
     gap: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     .container-hero-copy {
       width: 45%;
       max-height: 600px;
-      max-width: 600px;
+      max-width: 500px;
       order: 1;
       height: auto;
       align-items: flex-start;
@@ -132,6 +134,7 @@ export const StyledHero = styled.main`
     .title {
       max-width: 425px;
       font-size: 4rem;
+      margin-top: 6rem;
     }
 
     .copy {
@@ -140,9 +143,53 @@ export const StyledHero = styled.main`
     }
 
     .container-clients {
-      margin-top: 12rem;
+      margin-top: 6rem;
       justify-content: center;
-      gap: 7rem;
+      gap: 4.5rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    gap: 8rem;
+    .container-hero-img {
+      max-width: 550px;
+      min-height: 650px;
+      max-height: 650px;
+    }
+
+    .title {
+      max-width: 475px;
+      font-size: 4.5rem;
+      margin-top: 8rem;
+    }
+
+    .container-clients {
+      margin-top: 7rem;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .container-hero-copy {
+      width: 45%;
+      max-height: 700px;
+      max-width: 500px;
+      order: 1;
+      height: auto;
+      align-items: flex-start;
+    }
+
+    .container-hero-img {
+      max-width: 700px;
+      max-height: 700px;
+    }
+
+    .title {
+      max-width: 475px;
+      margin-top: 6rem;
+    }
+
+    .container-clients {
+      margin-top: 10rem;
     }
   }
 `;
