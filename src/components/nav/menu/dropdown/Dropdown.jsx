@@ -29,12 +29,12 @@ const Dropdown = (props) => {
   );
 
   return (
-    <li className="container-dropdown">
+    <div className="container-dropdown">
       <div className="toggle-dropdown menu-btn" onClick={toggleDropdown}>
         {label} <img src={arrowImg} alt="toggle-drop-down" />
       </div>
       {isOpen && dropDownItems}
-    </li>
+    </div>
   );
 };
 

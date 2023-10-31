@@ -25,9 +25,12 @@ const Menu = (props) => {
             onClick={toggleMenu}
           />
           <ul className="container-links">
-            <Dropdown label="Features" arr={dropdown_1} />
-
-            <Dropdown label="Company" arr={dropdown_2} />
+            <li>
+              <Dropdown label="Features" arr={dropdown_1} />
+            </li>
+            <li>
+              <Dropdown label="Company" arr={dropdown_2} />
+            </li>
 
             <li>
               <a href="#" className="toggle-dropdown menu-btn">
